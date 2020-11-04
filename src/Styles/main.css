@@ -1,0 +1,10 @@
+.app-wrapper {
+    background-color: rgb(222, 150, 50);
+    color: rgb(45, 45, 222);
+    width: 70vw;
+    height: 70vh;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
