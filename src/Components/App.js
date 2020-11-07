@@ -6,9 +6,8 @@ import TodoList from './TodoList.js'
 class App extends Component {
   constructor(props) {
     super(props)
-  
-    this.state = {
-       
+
+    this.state = {  
        todoList: [],
     }
   }
@@ -38,7 +37,6 @@ class App extends Component {
         <header>
           <h1>ToDo List</h1>
         </header>
-
         <AddTodo handleSubmit = {this.handleSubmit}/>
         <TodoList handleDelete = {this.handleDelete} todoList = {this.state.todoList} />
       </main>

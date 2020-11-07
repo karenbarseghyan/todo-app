@@ -7,7 +7,7 @@ class TodoItem extends Component {
     render() {
         return (
             <div className = "TodoItem-Item">
-                {this.props.todo.text}
+                <span>{this.props.todo.text}</span>
                 <button onClick = {this.props.handleDelete}> 
                     <IconDelete height = '25px' width = '20px'/>
                 </button>

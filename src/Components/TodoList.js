@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, PureComponent } from 'react'
 import TodoItem from './TodoItem'
 
-class TodoList extends Component {
+class TodoList extends PureComponent {
     render() {
         const todoList = this.props.todoList.map((todo) =>{
             return(
