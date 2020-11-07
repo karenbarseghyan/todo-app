@@ -1,12 +1,11 @@
-import React, { Component, PureComponent } from 'react'
+import React, {memo} from 'react'
 import TodoItem from './TodoItem'
 
-class TodoList extends PureComponent {
-    render() {
-        const todoList = this.props.todoList.map((todo) =>{
+function TodoList (props) {
+        const todoList = props.todoList.map((todo) =>{
             return(
                 <TodoItem key={todo.todoId} 
-                        handleDelete = {() => {this.props.handleDelete(todo.todoId)}}
+                        handleDelete = {() => {props.handleDelete(todo.todoId)}}
                         todo = {todo}/>)
           })
 
@@ -15,7 +14,6 @@ class TodoList extends PureComponent {
                 {todoList}
             </section>
         )
-    }
 }
 
-export default TodoList
+export default memo(TodoList)
